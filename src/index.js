@@ -1,15 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
-import Test from '~/Text';
+import Routes from './routes';
 
-// import { Container } from './styles';
-
-export default function src() {
-  return (
-    <View>
-      <Text>Hello Gobarber</Text>
-      <Test />
-    </View>
-  );
+export default function App() {
+  return <Routes />;
 }
