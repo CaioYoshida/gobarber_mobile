@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 
 // import { Container } from './styles';
 
+import Background from '~/components/Background';
+
 export default function SignIn() {
   return (
-    <View>
-      <Text>Hello Goabrber</Text>
-    </View>
+    <Background>
+      <Text>SignIn</Text>
+    </Background>
   );
 }
