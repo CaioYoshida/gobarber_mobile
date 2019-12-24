@@ -3,23 +3,23 @@ import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import Background from '~/components/Background/';
+import Background from '~/components/Background/index';
 
 // import { Container } from './styles';
 
-export default function Dashboard() {
+export default function Profile() {
   return (
     <Background>
-      <Text>Dashboard</Text>
+      <Text>Profile</Text>
     </Background>
   );
 }
 
 function SubmitIcon({ tintColor }) {
-  return <Icon name="event" size={20} color={tintColor} />;
+  return <Icon name="person" size={20} color={tintColor} />;
 }
 
-Dashboard.navigationOptions = {
+Profile.navigationOptions = {
   tabBarLabel: 'Appointments',
   tabBarIcon: SubmitIcon,
 };
