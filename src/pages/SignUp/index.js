@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { Image } from 'react-native';
 
 import logo from '~/assets/logo.png';
@@ -14,7 +15,7 @@ import {
 
 import Background from '~/components/Background/index';
 
-export default function SignUp() {
+export default function SignUp({ navigation }) {
   const emailRef = useRef();
   const passwordRef = useRef();
 
@@ -55,7 +56,7 @@ export default function SignUp() {
 
           <SubmitButton onPress={handleSubmit}>Acesar</SubmitButton>
 
-          <SignLink onPress={() => navigation.navigate('SignIn')}>
+          <SignLink onPress={() => navigation.navigate()}>
             <SignLinkText>Já tenho conta</SignLinkText>
           </SignLink>
         </Form>
@@ -63,3 +64,9 @@ export default function SignUp() {
     </Background>
   );
 }
+
+SignUp.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired,
+  }).isRequired,
+};
