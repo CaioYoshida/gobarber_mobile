@@ -1,16 +1,26 @@
 import React from 'react';
-import { Text } from 'react-native';
 import PropTypes from 'prop-types';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Background from '~/components/Background/';
+import Appointment from '~/components/Appointments';
 
-// import { Container } from './styles';
+import { Container, Title, List } from './styles';
+
+const data = [1, 2, 3, 4, 5];
 
 export default function Dashboard() {
   return (
     <Background>
-      <Text>Dashboard</Text>
+      <Container>
+        <Title>Agendamentos</Title>
+
+        <List
+          data={data}
+          keyExtractor={item => String(item)}
+          renderItem={({ item }) => <Appointment data={item} />}
+        />
+      </Container>
     </Background>
   );
 }
@@ -20,7 +30,7 @@ function SubmitIcon({ tintColor }) {
 }
 
 Dashboard.navigationOptions = {
-  tabBarLabel: 'Appointments',
+  tabBarLabel: 'Agendamentos',
   tabBarIcon: SubmitIcon,
 };
 
