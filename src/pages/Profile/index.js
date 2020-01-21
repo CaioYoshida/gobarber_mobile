@@ -20,7 +20,7 @@ function SubmitIcon({ tintColor }) {
 }
 
 Profile.navigationOptions = {
-  tabBarLabel: 'Appointments',
+  tabBarLabel: 'Meu Perfil',
   tabBarIcon: SubmitIcon,
 };
 
