@@ -27,11 +27,29 @@ export default (signedIn = false) =>
           {
             Dashboard,
             New: {
-              screen: createStackNavigator({
-                SelectProvider,
-                SelectDateTime,
-                Confirm,
-              }),
+              screen: createStackNavigator(
+                {
+                  SelectProvider,
+                  SelectDateTime,
+                  Confirm,
+                },
+                {
+                  defaultNavigationOptions: {
+                    headerTransparent: true,
+                    headerTintColor: '#FFF',
+                    headerLeftContainerStyle: {
+                      marginLeft: 20,
+                      marginTop: 30,
+                    },
+                    headerTitleAlign: 'center',
+                    headerTitleStyle: {
+                      fontWeight: 'bold',
+                      fontSize: 20,
+                      marginTop: 30,
+                    },
+                  },
+                }
+              ),
               navigationOptions: {
                 tabBarVisible: false,
                 tabBarLabel: 'Agendar',
