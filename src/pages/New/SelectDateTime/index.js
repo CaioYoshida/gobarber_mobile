@@ -35,10 +35,8 @@ export default function SelectDateTime({ navigation }) {
     setHour(selectedHour);
 
     navigation.navigate('Confirm', {
-      params: {
-        provider,
-        hour,
-      },
+      provider,
+      hour,
     });
   }
 
