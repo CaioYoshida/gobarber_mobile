@@ -38,6 +38,6 @@ export default function DateTimeInput({ date, onChange }) {
 }
 
 DateTimeInput.propTypes = {
-  date: Proptypes.string.isRequired,
+  date: Proptypes.instanceOf(Date).isRequired,
   onChange: Proptypes.func.isRequired,
 };
