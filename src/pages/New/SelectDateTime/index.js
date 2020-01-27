@@ -13,7 +13,6 @@ import { Container, TimeList, TimeButton, TimeText } from './styles';
 
 export default function SelectDateTime({ navigation }) {
   const [date, setDate] = useState(new Date());
-  const [hour, setHour] = useState('');
   const [timeList, setTimeList] = useState([]);
   const provider = navigation.getParam('item');
 
@@ -32,11 +31,9 @@ export default function SelectDateTime({ navigation }) {
   }, [date, provider.id]);
 
   function handleSelectHour(selectedHour) {
-    setHour(selectedHour);
-
     navigation.navigate('Confirm', {
       provider,
-      hour,
+      hour: selectedHour,
     });
   }
 
